@@ -21,4 +21,14 @@ await esbuild.build({
   platform: 'browser',
 });
 
+// Bundle the analytics.js file
+await esbuild.build({
+  entryPoints: ['analytics.js'],
+  bundle: true,
+  outfile: 'dist/analytics.js',
+  format: 'esm',
+  minify: true,
+  platform: 'browser',
+});
+
 console.log('Build complete! Output in dist/');
