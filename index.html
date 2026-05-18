@@ -1,47 +1,48 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SoloTrail is an early-stage hiking tracker prototype exploring standalone GPS, barometric altitude and MicroSD logging.">
-  <title>SoloTrail | ESP32 Hiking Tracker Prototype</title>
+  <meta name="description" content="SoloTrail ist ein früher Wander-Tracker-Prototyp für private GPS-Aufzeichnung, barometrische Höhendaten und MicroSD-Logging ohne Smartphone-Abhängigkeit.">
+  <title>SoloTrail | Privater Wander-Tracker Prototyp</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="SoloTrail home">
+    <a class="brand" href="#top" aria-label="SoloTrail Startseite">
       <span class="brand-mark" aria-hidden="true">ST</span>
       <span>SoloTrail</span>
     </a>
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="#prototype">Prototype</a>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <a href="#prototype">Vision</a>
       <a href="#firmware">Firmware</a>
-      <a href="#roadmap">Roadmap</a>
+      <a href="#roadmap">Ausblick</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">Early-stage hiking tracker concept</p>
-        <h1 id="hero-title">SoloTrail ESP32 firmware prototype</h1>
+        <p class="eyebrow">Privater Wander-Tracker in Entwicklung</p>
+        <h1 id="hero-title">Wandern ohne Handy-Zwang</h1>
         <p class="hero-text">
-          A compact standalone hiking tracker concept for logging GPS position,
-          speed, time, barometric altitude and environmental sensor data to a MicroSD card.
+          SoloTrail ist ein eigenständiges Konzept für alle, die ihre Route,
+          Höhenmeter und Bewegungsdaten aufzeichnen möchten, ohne unterwegs dauerhaft
+          vom Smartphone, Cloud-Konten oder Tracking-Apps abhängig zu sein.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#firmware">View firmware scope</a>
-          <a class="button secondary" href="#roadmap">See roadmap</a>
+          <a class="button primary" href="#firmware">Geplante Specs</a>
+          <a class="button secondary" href="#roadmap">Entwicklung ansehen</a>
         </div>
       </div>
 
-      <div class="hero-visual" aria-label="Prototype hardware concept illustration">
+      <div class="hero-visual" aria-label="Illustration des Prototyp-Konzepts">
         <div class="trail-card">
           <div class="device">
             <div class="device-screen">
-              <span class="screen-label">LOGGING</span>
-              <strong>14.8 km</strong>
-              <small>alt +426 m</small>
+              <span class="screen-label">AKTIV</span>
+              <strong>14,8 km</strong>
+              <small>Höhe +426 m</small>
             </div>
             <div class="device-leds" aria-hidden="true">
               <span></span>
@@ -60,60 +61,61 @@
 
     <section id="prototype" class="section">
       <div class="section-heading">
-        <p class="eyebrow">Prototype position</p>
-        <h2>Built for careful hardware bring-up</h2>
+        <p class="eyebrow">Warum SoloTrail?</p>
+        <h2>Mehr Kontrolle über die eigenen Tourdaten</h2>
       </div>
       <div class="feature-grid">
         <article>
-          <h3>Standalone logging</h3>
-          <p>Target firmware records hiking data locally to MicroSD instead of depending completely on a phone.</p>
+          <h3>Datenschutz zuerst</h3>
+          <p>Die geplante Firmware speichert Tourdaten lokal auf MicroSD. Kein automatischer Upload, kein App-Konto, keine unsichtbare Datenweitergabe.</p>
         </article>
         <article>
-          <h3>Module-first testing</h3>
-          <p>ESP32 boot, GPS UART, BMP390L I2C and MicroSD SPI are validated step by step before integration.</p>
+          <h3>Unabhängig vom Handy</h3>
+          <p>SoloTrail soll auch dann weiterloggen, wenn das Smartphone im Rucksack bleibt, Akku sparen muss oder auf der Tour bewusst Pause hat.</p>
         </article>
         <article>
-          <h3>Honest status</h3>
-          <p>This is not a finished product. It is a technical prototype for learning, validation and product exploration.</p>
+          <h3>Ehrlicher Prototyp</h3>
+          <p>Das Projekt ist noch kein fertiges Produkt, sondern ein technischer Prototyp für Tests, Validierung und die nächsten Produktentscheidungen.</p>
         </article>
       </div>
     </section>
 
     <section id="firmware" class="section split">
       <div>
-        <p class="eyebrow">Firmware target</p>
-        <h2>ESP32, GPS, BMP390L and MicroSD</h2>
+        <p class="eyebrow">Geplante Ausstattung</p>
+        <h2>Kompakte Technik für echte Touren</h2>
         <p>
-          The firmware prototype focuses on readable embedded code, predictable wiring,
-          CSV track logs and practical status feedback through LEDs and a start/stop button.
+          Die geplante SoloTrail-Basis kombiniert präzise Positionsdaten, barometrische
+          Höhenmessung und robuste lokale Speicherung. Ziel ist ein schlanker Tracker,
+          der unterwegs unauffällig mitläuft und danach auswertbare CSV-Tourdaten liefert.
         </p>
       </div>
       <div class="spec-panel">
         <dl>
-          <div><dt>GPS</dt><dd>NEO-6M compatible module over UART2</dd></div>
-          <div><dt>Altitude</dt><dd>BMP390L pressure sensor over I2C</dd></div>
-          <div><dt>Storage</dt><dd>CSV logs on MicroSD over SPI</dd></div>
-          <div><dt>Controls</dt><dd>GPIO LEDs and INPUT_PULLUP button</dd></div>
+          <div><dt>GPS-Tracking</dt><dd>Geplantes NEO-6M kompatibles Modul für Position, Zeit, Strecke und Geschwindigkeit</dd></div>
+          <div><dt>Höhenprofil</dt><dd>BMP390L Barometersensor für feinere Höhendaten als reines GPS-Tracking</dd></div>
+          <div><dt>Lokaler Speicher</dt><dd>CSV-Logs auf MicroSD für einfache Analyse, Archivierung und Import in eigene Tools</dd></div>
+          <div><dt>Direkte Bedienung</dt><dd>Status-LEDs und Start/Stop-Taste für klare Rückmeldung ohne App-Bedienung am Weg</dd></div>
         </dl>
       </div>
     </section>
 
     <section id="roadmap" class="section">
       <div class="section-heading">
-        <p class="eyebrow">Roadmap</p>
-        <h2>Next engineering steps</h2>
+        <p class="eyebrow">Ausblick</p>
+        <h2>Vom Testaufbau zum trailtauglichen Gerät</h2>
       </div>
       <ol class="roadmap">
-        <li>Repeat GPS validation on the target SoloTrail UART2 pins.</li>
-        <li>Finalize CSV logging format and integrated firmware tests.</li>
-        <li>Document real hardware test logs, photos and serial output.</li>
-        <li>Move from breadboard wiring toward PCB, battery and enclosure validation.</li>
+        <li>GPS-Validierung auf den finalen SoloTrail UART2-Pins wiederholen.</li>
+        <li>CSV-Logging-Format, Sensorfusion und integrierte Firmwaretests finalisieren.</li>
+        <li>Echte Hardware-Testlogs, Fotos und serielle Ausgaben dokumentieren.</li>
+        <li>Vom Breadboard zu PCB, Akkukonzept und wetterfester Gehäusevalidierung wechseln.</li>
       </ol>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>SoloTrail is an early-stage technical prototype, not a certified navigation or safety device.</p>
+    <p>SoloTrail ist ein früher technischer Prototyp und kein zertifiziertes Navigations- oder Sicherheitsgerät.</p>
   </footer>
 
   <script src="assets/js/main.js"></script>
