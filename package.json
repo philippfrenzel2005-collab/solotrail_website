@@ -1,0 +1,27 @@
+{
+  "name": "solotrail-website",
+  "version": "1.0.0",
+  "description": "website for solotrail",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philippfrenzel2005-collab/SoloTrail_Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philippfrenzel2005-collab/SoloTrail_Website/issues"
+  },
+  "homepage": "https://github.com/philippfrenzel2005-collab/SoloTrail_Website#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.2"
+  }
+}
