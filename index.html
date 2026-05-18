@@ -34,12 +34,6 @@
           <a class="button primary" href="#firmware">Geplante Specs</a>
           <a class="button secondary" href="#roadmap">Entwicklung ansehen</a>
         </div>
-
-        <div class="hero-meta" aria-label="SoloTrail Schwerpunkte">
-          <span>Lokal gespeichert</span>
-          <span>Ohne App-Zwang</span>
-          <span>Tourbereit geplant</span>
-        </div>
       </div>
 
       <div class="hero-visual" aria-label="Illustration des Prototyp-Konzepts">
@@ -72,19 +66,20 @@
       </div>
       <div class="feature-grid">
         <article>
-          <span class="feature-number">01</span>
           <h3>Datenschutz zuerst</h3>
-          <p>Die geplante Firmware speichert Tourdaten lokal auf MicroSD. Kein automatischer Upload, kein App-Konto, keine unsichtbare Datenweitergabe.</p>
+          <p>Der SoloTrail speichert Tourdaten lokal auf MicroSD. Kein automatischer Upload, kein App-Konto, keine unsichtbare Datenweitergabe.</p>
         </article>
         <article>
-          <span class="feature-number">02</span>
           <h3>Unabhängig vom Handy</h3>
-          <p>SoloTrail soll auch dann weiterloggen, wenn das Smartphone im Rucksack bleibt, Akku sparen muss oder auf der Tour bewusst Pause hat.</p>
+          <p>SoloTrail loggt auch dann wenn das Smartphone im Rucksack bleibt, Akku sparen muss oder auf der Tour bewusst Pause hat.</p>
         </article>
         <article>
-          <span class="feature-number">03</span>
-          <h3>Ehrlicher Prototyp</h3>
-          <p>Das Projekt ist noch kein fertiges Produkt, sondern ein technischer Prototyp für Tests, Validierung und die nächsten Produktentscheidungen.</p>
+          <h3>Webapp</h3>
+          <p>SoloTrail verarbeitet aufgezeichnete GPS-Daten lokal im Browser und visualisiert Route, Distanz und Dauer — ohne Cloud-Upload oder Externen Diensten.</p>
+        </article>
+        <article>
+          <h3>Webapp</h3>
+          <p>SoloTrail ist Spritzwassergeschützt und Stoßfest und hält jeder Wanderung stand</p>
         </article>
       </div>
     </section>
@@ -96,28 +91,15 @@
         <p>
           Die geplante SoloTrail-Basis kombiniert präzise Positionsdaten, barometrische
           Höhenmessung und robuste lokale Speicherung. Ziel ist ein schlanker Tracker,
-          der unterwegs unauffällig mitläuft und danach auswertbare CSV-Tourdaten liefert.
+          der unterwegs unauffällig mitläuft und danach auswertbare Tourdaten liefert.
         </p>
       </div>
       <div class="spec-panel">
-        <p class="panel-kicker">Technikpaket</p>
         <dl>
-          <div>
-            <dt>GPS-Tracking</dt>
-            <dd>Geplantes NEO-6M kompatibles Modul für Position, Zeit, Strecke und Geschwindigkeit</dd>
-          </div>
-          <div>
-            <dt>Höhenprofil</dt>
-            <dd>BMP390L Barometersensor für feinere Höhendaten als reines GPS-Tracking</dd>
-          </div>
-          <div>
-            <dt>Lokaler Speicher</dt>
-            <dd>CSV-Logs auf MicroSD für einfache Analyse, Archivierung und Import in eigene Tools</dd>
-          </div>
-          <div>
-            <dt>Direkte Bedienung</dt>
-            <dd>Status-LEDs und Start/Stop-Taste für klare Rückmeldung ohne App-Bedienung am Weg</dd>
-          </div>
+          <div><dt>GPS-Tracking</dt><dd>Geplantes NEO-6M Modul für Position, Zeit, Strecke und Geschwindigkeit</dd></div>
+          <div><dt>Höhenprofil</dt><dd>Barometersensor für feinere Höhendaten als reines GPS-Tracking und möglichkeit zur Temperatur/Luftfeuchtigkeitsmessung</dd></div>
+          <div><dt>Lokaler Speicher</dt><dd>CSV-Logs auf MicroSD für einfache Analyse, Archivierung und Import in eigene Tools</dd></div>
+          <div><dt>Direkte Bedienung</dt><dd>Status-LEDs und Tasten für Stromsparende Bedienung ohne App am Weg</dd></div>
         </dl>
       </div>
     </section>
@@ -128,11 +110,12 @@
         <h2>Vom Testaufbau zum trailtauglichen Gerät</h2>
       </div>
       <ol class="roadmap">
-        <li>GPS-Validierung auf den finalen SoloTrail UART2-Pins wiederholen.</li>
-        <li>CSV-Logging-Format, Sensorfusion und integrierte Firmwaretests finalisieren.</li>
-        <li>Echte Hardware-Testlogs, Fotos und serielle Ausgaben dokumentieren.</li>
-        <li>Vom Breadboard zu PCB, Akkukonzept und wetterfester Gehäusevalidierung wechseln.</li>
+        <li>Prototyping: Done</li>
+        <li>Webapp: In Progress</li>
+        <li>First early Adopters: In Progress</li>
+        <li>Finished Produkt: In Planning</li>
       </ol>
+
     </section>
   </main>
 
