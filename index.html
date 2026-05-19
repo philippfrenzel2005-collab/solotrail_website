@@ -3,160 +3,525 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SoloTrail entwickelt einen eigenständigen Wander-Tracker für lokale GPS-Aufzeichnung, barometrische Höhendaten und private Touranalyse ohne Smartphone-Zwang.">
-  <title>SoloTrail | Privacy by Design Wander-Tracker</title>
+  <meta name="description" content="SoloTrail — ein eigenständiger Wander-Tracker für lokale GPS-Aufzeichnung, barometrische Höhendaten und private Touranalyse ohne Smartphone-Zwang.">
+  <title>SoloTrail — Wandern ohne Smartphone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="SoloTrail Startseite">
-      <span class="brand-mark" aria-hidden="true">ST</span>
-      <span>SoloTrail</span>
+    <a class="brand" href="#top" aria-label="SoloTrail">
+      <span class="brand__name">SoloTrail</span>
+      <span class="brand__issue">№ 001 — Prototyp</span>
     </a>
     <nav class="site-nav" aria-label="Hauptnavigation">
-      <a href="#prototype">Vision</a>
-      <a href="#privacy">Privacy</a>
-      <a href="#firmware">Firmware</a>
-      <a href="#roadmap">Ausblick</a>
-      <a href="#contact">Kontakt</a>
+      <a href="#device" data-i18n-de="Gerät" data-i18n-en="Device">Gerät</a>
+      <a href="#privacy" data-i18n-de="Privacy" data-i18n-en="Privacy">Privacy</a>
+      <a href="#fieldnotes" data-i18n-de="Field Notes" data-i18n-en="Field Notes">Field Notes</a>
+      <a href="#roadmap" data-i18n-de="Roadmap" data-i18n-en="Roadmap">Roadmap</a>
+      <a href="#contact" data-i18n-de="Kontakt" data-i18n-en="Contact">Kontakt</a>
     </nav>
+    <div class="lang-toggle" role="group" aria-label="Sprache wählen">
+      <button type="button" data-lang="de" aria-pressed="true">DE</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
   </header>
 
   <main id="top">
+
+    <!-- =================== HERO =================== -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">Privacy by Design Wander-Tracker</p>
-        <h1 id="hero-title">Wandern ohne Smartphone</h1>
-        <p class="hero-text">
-          SoloTrail entwickelt einen eigenständigen GPS-Tracker für Wanderungen. Das Gerät zeichnet Route,
-          Höhenmeter und Bewegungsdaten lokal auf — ohne Smartphone-Zwang, ohne Cloud-Konto und ohne
-          automatischen Upload sensibler Standortdaten.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#firmware">Technologie ansehen</a>
-          <a class="button secondary" href="#roadmap">Roadmap ansehen</a>
+      <div class="hero__meta">
+        <span class="label"
+              data-i18n-de="Privacy by Design Wander-Tracker"
+              data-i18n-en="Privacy by Design hiking tracker">Privacy by Design Wander-Tracker</span>
+        <span class="label"
+              data-i18n-de="Ausgabe 001 · Frühjahr 2026"
+              data-i18n-en="Issue 001 · Spring 2026">Ausgabe 001 · Frühjahr 2026</span>
+      </div>
+
+      <div class="hero__title reveal">
+        <h1 id="hero-title" class="display"
+            data-i18n-de='Wandern <em>ohne</em><br>Smartphone.'
+            data-i18n-en='Hiking <em>without</em><br>a phone.'>Wandern <em>ohne</em><br>Smartphone.</h1>
+      </div>
+
+      <div class="hero__row">
+        <div class="hero__lede reveal reveal--delay-1">
+          <p class="lede"
+             data-i18n-de="Ein eigenständiger GPS-Tracker, der Route, Höhenmeter und Bewegungsdaten <em>lokal</em> aufzeichnet — ohne Cloud-Konto, ohne automatischen Upload, ohne unsichtbare Datenweitergabe."
+             data-i18n-en="A standalone GPS tracker that records route, elevation and motion data <em>locally</em> — no cloud account, no automatic upload, no invisible data sharing.">Ein eigenständiger GPS-Tracker, der Route, Höhenmeter und Bewegungsdaten <em>lokal</em> aufzeichnet — ohne Cloud-Konto, ohne automatischen Upload, ohne unsichtbare Datenweitergabe.</p>
         </div>
-
-        <div class="hero-meta" aria-label="SoloTrail Schwerpunkte">
-          <span>Lokal gespeichert</span>
-          <span>Ohne Handy beim Tracking</span>
-          <span>Tourbereit geplant</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="prototype" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Warum SoloTrail?</p>
-        <h2>Mehr Kontrolle über die eigenen Tourdaten</h2>
-      </div>
-      <div class="feature-grid">
-        <article>
-          <h3>Datenschutz zuerst</h3>
-          <p>Der SoloTrail speichert Tourdaten lokal auf MicroSD. Kein automatischer Upload, kein App-Konto, keine unsichtbare Datenweitergabe.</p>
-        </article>
-        <article>
-          <h3>Unabhängig vom Handy</h3>
-          <p>SoloTrail soll auch dann weiter aufzeichnen, wenn das Smartphone im Rucksack bleibt, Akku sparen muss oder auf der Tour bewusst Pause hat.</p>
-        </article>
-        <article>
-          <h3>Robustes Zielbild</h3>
-          <p>Geplant ist ein kompaktes, spritzwassergeschütztes Gehäuse, das unter realen Tourbedingungen validiert wird.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="privacy" class="section split">
-      <div>
-        <p class="eyebrow">Privacy by design</p>
-        <h2>Deine Route bleibt bei dir</h2>
-        <p>
-          SoloTrail speichert Tourdaten lokal auf dem Gerät. Die App visualisiert und analysiert
-          via Bluetooth exportierte GPS-Daten offline — ohne Cloud-Upload und ohne Übertragung sensibler
-          Standortdaten an externe Server.
-        </p>
-      </div>
-      <div class="spec-panel">
-        <p class="panel-kicker">Datenfluss</p>
-        <dl>
-          <div>
-            <dt>Aufzeichnung</dt>
-            <dd>GPS- und Höhendaten werden während der Tour lokal gespeichert.</dd>
-          </div>
-          <div>
-            <dt>Export</dt>
-            <dd>Die Tourdaten können via Bluetooth exportiert werden und bleiben unter voller Kontrolle des Nutzers.</dd>
-          </div>
-          <div>
-            <dt>Analyse</dt>
-            <dd>Route, Distanz und Dauer werden in der App visualisiert.</dd>
-          </div>
+        <dl class="hero__coords reveal reveal--delay-2">
+          <dt data-i18n-de="Status" data-i18n-en="Status">Status</dt>
+          <dd data-i18n-de="Aktive Entwicklung" data-i18n-en="Active development">Aktive Entwicklung</dd>
+          <dt data-i18n-de="Standort" data-i18n-en="Location">Standort</dt>
+          <dd>47.5162° N, 14.5501° E</dd>
+          <dt data-i18n-de="Höhe" data-i18n-en="Elevation">Höhe</dt>
+          <dd>1.842 m</dd>
+          <dt data-i18n-de="Kontakt" data-i18n-en="Contact">Kontakt</dt>
+          <dd>hello@solotrail.at</dd>
         </dl>
       </div>
+
+      <figure class="hero__map reveal reveal--delay-3" aria-hidden="true">
+        <img src="assets/images/solotrail-hero-map.png" alt="">
+      </figure>
+
+      <figcaption class="hero__caption">
+        <span data-i18n-de="Fig. 01 — Beispieltour, Hochschwab" data-i18n-en="Fig. 01 — Sample tour, Hochschwab">Fig. 01 — Beispieltour, Hochschwab</span>
+        <span><strong>14,8 km</strong> · <strong>+426 m</strong> · 03:42 h</span>
+      </figcaption>
     </section>
 
-    <section id="firmware" class="section split">
-      <div class="spec-panel">
-        <p class="panel-kicker">Technologie</p>
-        <dl>
-          <div><dt>GPS-Tracking</dt><dd>NEO-6M-Modul für Position, Zeit, Strecke und Geschwindigkeit</dd></div>
-          <div><dt>Höhenprofil</dt><dd>Barometrische Höhendaten als Ergänzung zum GPS-Tracking, mit weiteren Umgebungswerten</dd></div>
-          <div><dt>Lokaler Speicher</dt><dd>CSV-Logs auf MicroSD für einfache Analyse, Archivierung und Import in eigene Tools</dd></div>
-          <div><dt>Direkte Bedienung</dt><dd>Status-LEDs und Tasten für stromsparende Bedienung ohne App am Weg</dd></div>
-          <div><dt>Visualisierung</dt><dd>App die optional die Tourdaten visualisiert und Gerätezustand anzeigt</dd></div>
-        </dl>
+    <!-- =================== MANIFESTO =================== -->
+    <section class="manifesto" aria-label="Manifest">
+      <p class="manifesto__quote reveal"
+         data-i18n-de='Deine Route ist <em>deine</em> Route. Sie gehört auf dein Gerät — nicht in unsere Cloud.'
+         data-i18n-en='Your route is <em>your</em> route. It belongs on your device — not in our cloud.'>Deine Route ist <em>deine</em> Route. Sie gehört auf dein Gerät — nicht in unsere Cloud.</p>
+      <p class="manifesto__attr reveal reveal--delay-1"
+         data-i18n-de="Aus dem SoloTrail-Manifest, Punkt 01"
+         data-i18n-en="From the SoloTrail manifesto, point 01">Aus dem SoloTrail-Manifest, Punkt 01</p>
+    </section>
+
+    <!-- =================== §01 DEVICE =================== -->
+    <header class="section-rule" id="device">
+      <span class="section-rule__num">§ 01</span>
+      <span class="section-rule__title" data-i18n-de="Das Gerät" data-i18n-en="The Device">Das Gerät</span>
+      <span class="section-rule__num">2026</span>
+    </header>
+
+    <section class="device" aria-labelledby="device-title">
+      <div class="device__head">
+        <div class="reveal">
+          <span class="label"
+                data-i18n-de="Hardware"
+                data-i18n-en="Hardware">Hardware</span>
+          <h2 id="device-title" class="h-section" style="margin-top: 18px"
+              data-i18n-de='Kompakte Technik<br>für <em>echte</em> Touren.'
+              data-i18n-en='Compact hardware<br>for <em>real</em> tours.'>Kompakte Technik<br>für <em>echte</em> Touren.</h2>
+        </div>
+        <p class="prose prose--wide reveal reveal--delay-1"
+           data-i18n-de="Die SoloTrail-Basis kombiniert GPS-Positionsdaten, barometrische Höhenmessung und lokale Speicherung. Ein kompakter Tracker, der unterwegs eigenständig aufzeichnet und nach der Tour strukturierte Daten für eigene Auswertung bereitstellt."
+           data-i18n-en="The SoloTrail base unit combines GPS positioning, barometric altimetry and local storage. A compact tracker that records autonomously in the field and afterwards hands you structured data for your own analysis.">Die SoloTrail-Basis kombiniert GPS-Positionsdaten, barometrische Höhenmessung und lokale Speicherung. Ein kompakter Tracker, der unterwegs eigenständig aufzeichnet und nach der Tour strukturierte Daten für eigene Auswertung bereitstellt.</p>
       </div>
-      <div>
-        <p class="eyebrow">Spezifikationen</p>
-        <h2>Kompakte Technik für echte Touren</h2>
-        <p>
-          Die SoloTrail-Basis kombiniert GPS-Positionsdaten, barometrische Höhenmessung und lokale Speicherung.
-          Ziel ist ein kompakter Tracker, der unterwegs eigenständig aufzeichnet und anschließend
-          strukturierte Tourdaten für Analyse und Visualisierung bereitstellt.
-        </p>
+
+      <div class="device__main">
+        <div class="device-art reveal">
+          <div class="device-art__stripes"></div>
+          <span class="device-art__measure device-art__measure--w">↔ 78 mm</span>
+          <span class="device-art__measure device-art__measure--h">↕ 52 mm</span>
+          <div class="device-art__inner">
+            <!-- Stylized device sketch (placeholder until real render) -->
+            <svg class="device-mock" viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- body -->
+              <rect x="10" y="10" width="220" height="160" rx="14" fill="#2c322d" stroke="#1a1f1c" stroke-width="1.5"/>
+              <rect x="14" y="14" width="212" height="152" rx="11" fill="none" stroke="rgba(239,233,220,0.08)" stroke-width="1"/>
+              <!-- screen -->
+              <rect x="32" y="28" width="120" height="86" rx="4" fill="#1a1f1c" stroke="rgba(239,233,220,0.18)" stroke-width="0.8"/>
+              <!-- screen content: tiny topo lines -->
+              <g stroke="rgba(196, 74, 42, 0.85)" stroke-width="1.2" fill="none">
+                <path d="M 40 92 C 60 80, 80 78, 100 68 S 130 60, 144 52" />
+              </g>
+              <g stroke="rgba(239,233,220,0.22)" stroke-width="0.6" fill="none">
+                <path d="M 40 60 Q 70 56, 95 60 T 144 64" />
+                <path d="M 40 72 Q 70 68, 95 72 T 144 76" />
+                <path d="M 40 84 Q 70 80, 95 84 T 144 88" />
+                <path d="M 40 96 Q 70 92, 95 96 T 144 100" />
+              </g>
+              <circle cx="100" cy="68" r="2.5" fill="#c44a2a" stroke="#efe9dc" stroke-width="1" />
+              <!-- status bar -->
+              <text x="38" y="40" fill="rgba(239,233,220,0.7)" font-family="IBM Plex Mono, monospace" font-size="6" letter-spacing="0.8">REC · 02:14</text>
+              <text x="125" y="40" fill="rgba(239,233,220,0.7)" font-family="IBM Plex Mono, monospace" font-size="6" letter-spacing="0.4">GPS</text>
+              <!-- buttons -->
+              <g fill="rgba(239,233,220,0.16)" stroke="rgba(239,233,220,0.3)" stroke-width="0.6">
+                <rect x="170" y="32" width="42" height="22" rx="4" />
+                <rect x="170" y="62" width="42" height="22" rx="4" />
+                <rect x="170" y="92" width="42" height="22" rx="4" />
+              </g>
+              <text x="191" y="46" fill="rgba(239,233,220,0.8)" font-family="IBM Plex Mono, monospace" font-size="6" text-anchor="middle">REC</text>
+              <text x="191" y="76" fill="rgba(239,233,220,0.8)" font-family="IBM Plex Mono, monospace" font-size="6" text-anchor="middle">MRK</text>
+              <text x="191" y="106" fill="rgba(239,233,220,0.8)" font-family="IBM Plex Mono, monospace" font-size="6" text-anchor="middle">MENU</text>
+              <!-- status LEDs -->
+              <circle cx="40" cy="142" r="2.4" fill="#c44a2a" />
+              <circle cx="54" cy="142" r="2.4" fill="rgba(31, 74, 54, 0.9)" />
+              <circle cx="68" cy="142" r="2.4" fill="rgba(239,233,220,0.25)" />
+              <!-- branding -->
+              <text x="195" y="144" fill="rgba(239,233,220,0.4)" font-family="Newsreader, serif" font-style="italic" font-size="9" text-anchor="middle">SoloTrail</text>
+            </svg>
+          </div>
+          <span class="device-art__caption"
+                data-i18n-de="Fig. 02 — Konzept-Skizze, Maßstab 1:1"
+                data-i18n-en="Fig. 02 — Concept sketch, scale 1:1">Fig. 02 — Konzept-Skizze, Maßstab 1:1</span>
+        </div>
+
+        <div class="specs reveal reveal--delay-1">
+          <div class="spec">
+            <span class="spec__num">01</span>
+            <h3 class="spec__name"
+                data-i18n-de="GPS-Tracking"
+                data-i18n-en="GPS tracking">GPS-Tracking</h3>
+            <span class="spec__value">NEO-6M · 1 Hz</span>
+            <p class="spec__desc"
+               data-i18n-de="Position, Zeit, Strecke und Geschwindigkeit. Sekündliche Aufzeichnung mit ausreichender Genauigkeit für Wanderprofile."
+               data-i18n-en="Position, time, distance and speed. One-Hertz logging with accuracy that fits hiking profiles.">Position, Zeit, Strecke und Geschwindigkeit. Sekündliche Aufzeichnung mit ausreichender Genauigkeit für Wanderprofile.</p>
+          </div>
+          <div class="spec">
+            <span class="spec__num">02</span>
+            <h3 class="spec__name"
+                data-i18n-de="Höhenprofil"
+                data-i18n-en="Elevation">Höhenprofil</h3>
+            <span class="spec__value">BMP280 · ±1 m</span>
+            <p class="spec__desc"
+               data-i18n-de="Barometrische Höhendaten ergänzen das GPS-Signal — präziser als reines Satelliten-Höhe-Tracking, vor allem in Gipfelnähe."
+               data-i18n-en="Barometric altitude complements the GPS signal — more accurate than satellite-only altitude, especially near summits.">Barometrische Höhendaten ergänzen das GPS-Signal — präziser als reines Satelliten-Höhe-Tracking, vor allem in Gipfelnähe.</p>
+          </div>
+          <div class="spec">
+            <span class="spec__num">03</span>
+            <h3 class="spec__name"
+                data-i18n-de="Lokaler Speicher"
+                data-i18n-en="Local storage">Lokaler Speicher</h3>
+            <span class="spec__value">MicroSD · CSV</span>
+            <p class="spec__desc"
+               data-i18n-de="Tourdaten liegen als einfache CSV-Logs auf der MicroSD. Lesbar in jedem Editor, importierbar in eigene Werkzeuge."
+               data-i18n-en="Tour data is written as plain CSV logs on MicroSD. Readable in any editor, importable into your own tools.">Tourdaten liegen als einfache CSV-Logs auf der MicroSD. Lesbar in jedem Editor, importierbar in eigene Werkzeuge.</p>
+          </div>
+          <div class="spec">
+            <span class="spec__num">04</span>
+            <h3 class="spec__name"
+                data-i18n-de="Direkte Bedienung"
+                data-i18n-en="Direct controls">Direkte Bedienung</h3>
+            <span class="spec__value">3 Tasten · 3 LEDs</span>
+            <p class="spec__desc"
+               data-i18n-de="Status-LEDs und Tasten für stromsparende Bedienung am Weg. Keine App am Berg nötig."
+               data-i18n-en="Status LEDs and tactile buttons for low-power operation on the trail. No app needed in the field.">Status-LEDs und Tasten für stromsparende Bedienung am Weg. Keine App am Berg nötig.</p>
+          </div>
+          <div class="spec">
+            <span class="spec__num">05</span>
+            <h3 class="spec__name"
+                data-i18n-de="Laufzeit"
+                data-i18n-en="Runtime">Laufzeit</h3>
+            <span class="spec__value">~ 18 h · Li-Ion</span>
+            <p class="spec__desc"
+               data-i18n-de="Zielwert für einen Tageswanderzyklus. Wird in Feldtests gegen reale Bedingungen validiert."
+               data-i18n-en="Target value for a full hiking day. To be validated against real-world conditions in field testing.">Zielwert für einen Tageswanderzyklus. Wird in Feldtests gegen reale Bedingungen validiert.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="roadmap" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">ROADMAP</p>
-        <h2>Der Weg zum feldtauglichen SoloTrail-Prototyp</h2>
-        <p>
-          In den nächsten Iterationen validieren wir GPS-Logging, Energieverbrauch und lokale Datenauswertung
-          unter realen Outdoor-Bedingungen.
-        </p>
+    <!-- =================== §02 PRIVACY =================== -->
+    <section class="privacy" id="privacy" aria-labelledby="privacy-title">
+      <header class="section-rule">
+        <span class="section-rule__num">§ 02</span>
+        <span class="section-rule__title" data-i18n-de="Privacy by Design" data-i18n-en="Privacy by Design">Privacy by Design</span>
+        <span class="section-rule__num">∅ Cloud</span>
+      </header>
+
+      <div class="privacy__head">
+        <div class="reveal">
+          <span class="label" style="color: color-mix(in oklab, #efe9dc 60%, transparent)"
+                data-i18n-de="Datenfluss"
+                data-i18n-en="Data flow">Datenfluss</span>
+          <h2 id="privacy-title" class="h-section" style="margin-top: 18px"
+              data-i18n-de='Deine Route<br>bleibt <em>bei dir.</em>'
+              data-i18n-en='Your route<br>stays <em>with you.</em>'>Deine Route<br>bleibt <em>bei dir.</em></h2>
+        </div>
+        <p class="lede reveal reveal--delay-1"
+           data-i18n-de="Drei Schritte. Keiner davon verlässt unsere Hände und landet bei einem Anbieter, dem du nicht zugestimmt hast."
+           data-i18n-en="Three steps. None of them leave your hands and end up with a provider you didn't agree to.">Drei Schritte. Keiner davon verlässt unsere Hände und landet bei einem Anbieter, dem du nicht zugestimmt hast.</p>
       </div>
-      <ol class="roadmap">
-        <li>
-          <strong>Hardware validieren</strong>
-          <span>GPS, Höhendaten, MicroSD-Logging und Energieverbrauch werden unter realen Bedingungen getestet.</span>
+
+      <ol class="dataflow" style="list-style: none; padding: 0; margin: 0">
+        <li class="dataflow__step reveal">
+          <span class="dataflow__num">01 / Aufzeichnung</span>
+          <div>
+            <div class="dataflow__icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+            </div>
+            <h3 class="dataflow__title"
+                data-i18n-de="Lokal aufgezeichnet."
+                data-i18n-en="Recorded locally.">Lokal aufgezeichnet.</h3>
+            <p class="dataflow__desc"
+               data-i18n-de="GPS- und Höhendaten werden während der Tour ausschließlich auf der MicroSD-Karte gespeichert. Kein Funk-Upload im Hintergrund."
+               data-i18n-en="GPS and elevation data is written exclusively to the MicroSD card while you walk. No background upload.">GPS- und Höhendaten werden während der Tour ausschließlich auf der MicroSD-Karte gespeichert. Kein Funk-Upload im Hintergrund.</p>
+          </div>
         </li>
-        <li>
-          <strong>Lokale App-Erfahrung entwickeln</strong>
-          <span>Die App zeigt Gerätestatus, Tourdaten und Auswertungen direkt vom Tracker — ohne Cloud-Zwang.</span>
+        <li class="dataflow__step reveal reveal--delay-1">
+          <span class="dataflow__num">02 / Export</span>
+          <div>
+            <div class="dataflow__icon">
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </div>
+            <h3 class="dataflow__title"
+                data-i18n-de="Du entscheidest."
+                data-i18n-en="You decide.">Du entscheidest.</h3>
+            <p class="dataflow__desc"
+               data-i18n-de="Nach der Tour kannst du die Daten via Bluetooth oder direkt von der Karte exportieren. Was übertragen wird, bestimmst du."
+               data-i18n-en="After the tour you export data via Bluetooth or straight from the card. What gets transferred is up to you.">Nach der Tour kannst du die Daten via Bluetooth oder direkt von der Karte exportieren. Was übertragen wird, bestimmst du.</p>
+          </div>
         </li>
-        <li>
-          <strong>Feldtests durchführen</strong>
-          <span>Echte Testtouren liefern Daten zu Genauigkeit, Laufzeit, Bedienung und nächster Produktiteration.</span>
+        <li class="dataflow__step reveal reveal--delay-2">
+          <span class="dataflow__num">03 / Analyse</span>
+          <div>
+            <div class="dataflow__icon">
+              <svg viewBox="0 0 24 24"><path d="M3 18l5-7 4 4 6-9 3 5"/></svg>
+            </div>
+            <h3 class="dataflow__title"
+                data-i18n-de="Offline ausgewertet."
+                data-i18n-en="Analysed offline.">Offline ausgewertet.</h3>
+            <p class="dataflow__desc"
+               data-i18n-de="Die Begleit-App visualisiert Route, Distanz und Höhenprofil direkt auf dem Gerät — ohne Konto, ohne Cloud-Verbindung."
+               data-i18n-en="The companion app renders route, distance and elevation right on your device — no account, no cloud connection.">Die Begleit-App visualisiert Route, Distanz und Höhenprofil direkt auf dem Gerät — ohne Konto, ohne Cloud-Verbindung.</p>
+          </div>
         </li>
       </ol>
     </section>
 
-    <section id="contact" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Contact us</p>
-        <h2>Interesse an SoloTrail?</h2>
-        <p>
-          Für Fragen, Feedback oder frühes Interesse am Prototyp erreichst du uns direkt per E-Mail.
-        </p>
-        <a class="button primary" href="mailto:hello@solotrail.at">hello@solotrail.at</a>
+    <!-- =================== §03 FIELD NOTES =================== -->
+    <header class="section-rule" id="fieldnotes">
+      <span class="section-rule__num">§ 03</span>
+      <span class="section-rule__title" data-i18n-de="Field Notes" data-i18n-en="Field Notes">Field Notes</span>
+      <span class="section-rule__num" data-i18n-de="Beispieltour" data-i18n-en="Sample Tour">Beispieltour</span>
+    </header>
+
+    <section class="fieldnotes" aria-labelledby="fieldnotes-title">
+      <div class="fieldnotes__head">
+        <div class="reveal">
+          <span class="label"
+                data-i18n-de="Beispieltour"
+                data-i18n-en="Sample tour">Beispieltour</span>
+          <h2 id="fieldnotes-title" class="h-section" style="margin-top: 18px"
+              data-i18n-de='Eine Tour,<br>als <em>Daten</em>.'
+              data-i18n-en='One tour,<br>as <em>data</em>.'>Eine Tour,<br>als <em>Daten</em>.</h2>
+        </div>
+        <p class="prose prose--wide reveal reveal--delay-1"
+           data-i18n-de="Auszug aus einem CSV-Log: 4. April 2026, Hochschwab-Plateau. Sekündliche GPS-Punkte, kombiniert mit barometrischer Höhe. So sehen Tourdaten aus, wenn sie dir gehören — als Zahlen, die du selbst lesen kannst."
+           data-i18n-en="Excerpt from a CSV log: April 4 2026, Hochschwab plateau. One-second GPS points combined with barometric altitude. This is what tour data looks like when it belongs to you — numbers you can read yourself.">Auszug aus einem CSV-Log: 4. April 2026, Hochschwab-Plateau. Sekündliche GPS-Punkte, kombiniert mit barometrischer Höhe. So sehen Tourdaten aus, wenn sie dir gehören — als Zahlen, die du selbst lesen kannst.</p>
+      </div>
+
+      <div class="tour">
+        <aside class="tour__sidebar reveal">
+          <div>
+            <h3 class="tour__title"
+                data-i18n-de="Hochschwab-Plateau"
+                data-i18n-en="Hochschwab plateau">Hochschwab-Plateau</h3>
+            <p class="tour__location">47.6212° N · 15.1389° E · 04.04.2026</p>
+          </div>
+
+          <div class="tour-stats">
+            <div>
+              <span class="label" data-i18n-de="Distanz" data-i18n-en="Distance">Distanz</span>
+              <span class="value">14,8<sup>km</sup></span>
+            </div>
+            <div>
+              <span class="label" data-i18n-de="Aufstieg" data-i18n-en="Ascent">Aufstieg</span>
+              <span class="value">+426<sup>m</sup></span>
+            </div>
+            <div>
+              <span class="label" data-i18n-de="Dauer" data-i18n-en="Duration">Dauer</span>
+              <span class="value">3:42<sup>h</sup></span>
+            </div>
+            <div>
+              <span class="label" data-i18n-de="Ø Tempo" data-i18n-en="Avg pace">Ø Tempo</span>
+              <span class="value">4,0<sup>km/h</sup></span>
+            </div>
+            <div>
+              <span class="label" data-i18n-de="Höchster Pkt." data-i18n-en="Highest pt.">Höchster Pkt.</span>
+              <span class="value">2.123<sup>m</sup></span>
+            </div>
+            <div>
+              <span class="label" data-i18n-de="GPS-Punkte" data-i18n-en="GPS points">GPS-Punkte</span>
+              <span class="value">13.412</span>
+            </div>
+          </div>
+        </aside>
+
+        <figure class="tour__chart reveal reveal--delay-1">
+          <header class="tour__chart-head">
+            <span class="label" data-i18n-de="Höhenprofil" data-i18n-en="Elevation profile">Höhenprofil</span>
+            <span class="label" style="color: var(--rust)">+426 m</span>
+          </header>
+          <!-- Elevation profile chart, drawn by JS -->
+          <svg id="elev-chart" viewBox="0 0 800 240" preserveAspectRatio="none" aria-label="Höhenprofil-Diagramm">
+            <!-- y grid lines -->
+            <g stroke="rgba(26,31,28,0.10)" stroke-width="0.5">
+              <line x1="0" y1="40" x2="800" y2="40"/>
+              <line x1="0" y1="100" x2="800" y2="100"/>
+              <line x1="0" y1="160" x2="800" y2="160"/>
+              <line x1="0" y1="220" x2="800" y2="220"/>
+            </g>
+            <!-- y axis labels -->
+            <g font-family="IBM Plex Mono, monospace" font-size="10" fill="#6b6557" letter-spacing="0.6">
+              <text x="6" y="36">2200</text>
+              <text x="6" y="96">2000</text>
+              <text x="6" y="156">1800</text>
+              <text x="6" y="216">1600</text>
+            </g>
+            <!-- area + line will be injected -->
+            <path id="elev-area" fill="rgba(196, 74, 42, 0.12)"/>
+            <path id="elev-line" fill="none" stroke="#c44a2a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="3000" stroke-dashoffset="3000"/>
+            <!-- summit marker -->
+            <g id="elev-summit"></g>
+          </svg>
+          <div class="tour__chart-axis">
+            <span>0 km</span>
+            <span>3,7 km</span>
+            <span>7,4 km</span>
+            <span>11,1 km</span>
+            <span>14,8 km</span>
+          </div>
+        </figure>
       </div>
     </section>
+
+    <!-- =================== §04 ROADMAP =================== -->
+    <header class="section-rule" id="roadmap">
+      <span class="section-rule__num">§ 04</span>
+      <span class="section-rule__title">Roadmap</span>
+      <span class="section-rule__num" data-i18n-de="2026 — 2027" data-i18n-en="2026 — 2027">2026 — 2027</span>
+    </header>
+
+    <section class="roadmap" aria-labelledby="roadmap-title">
+      <div class="roadmap__head">
+        <div class="reveal">
+          <span class="label"
+                data-i18n-de="Der Weg"
+                data-i18n-en="The path">Der Weg</span>
+          <h2 id="roadmap-title" class="h-section" style="margin-top: 18px"
+              data-i18n-de='Vom Prototyp<br>zum <em>feldtauglichen</em><br>Gerät.'
+              data-i18n-en='From prototype<br>to a <em>field-ready</em><br>device.'>Vom Prototyp<br>zum <em>feldtauglichen</em><br>Gerät.</h2>
+        </div>
+        <p class="prose prose--wide reveal reveal--delay-1"
+           data-i18n-de="In den nächsten Iterationen validieren wir GPS-Logging, Energieverbrauch und lokale Datenauswertung unter realen Outdoor-Bedingungen. Ehrlich, langsam, mit echten Touren."
+           data-i18n-en="In the next iterations we'll validate GPS logging, power consumption and local analysis under real outdoor conditions. Honest, slow, with real walks.">In den nächsten Iterationen validieren wir GPS-Logging, Energieverbrauch und lokale Datenauswertung unter realen Outdoor-Bedingungen. Ehrlich, langsam, mit echten Touren.</p>
+      </div>
+
+      <ol class="roadmap__list">
+        <li class="roadmap__item reveal" data-status="done">
+          <span class="roadmap__num">01 — Q1 '26</span>
+          <h3 class="roadmap__title"
+              data-i18n-de='Hardware <em>skizziert.</em>'
+              data-i18n-en='Hardware <em>sketched.</em>'>Hardware <em>skizziert.</em></h3>
+          <p class="roadmap__desc"
+             data-i18n-de="GPS-Modul, Barometer und MicroSD-Logging in einem Breadboard-Prototyp. Erste Logs unter Laborbedingungen."
+             data-i18n-en="GPS module, barometer and MicroSD logging on a breadboard prototype. First logs under lab conditions.">GPS-Modul, Barometer und MicroSD-Logging in einem Breadboard-Prototyp. Erste Logs unter Laborbedingungen.</p>
+          <span class="roadmap__status" data-i18n-de="Abgeschlossen" data-i18n-en="Complete">Abgeschlossen</span>
+        </li>
+        <li class="roadmap__item reveal reveal--delay-1" data-status="now">
+          <span class="roadmap__num">02 — Q2 '26</span>
+          <h3 class="roadmap__title"
+              data-i18n-de='Hardware <em>validiert.</em>'
+              data-i18n-en='Hardware <em>validated.</em>'>Hardware <em>validiert.</em></h3>
+          <p class="roadmap__desc"
+             data-i18n-de="GPS-Genauigkeit, Höhendaten, Energieverbrauch und MicroSD-Logging werden unter realen Bedingungen getestet."
+             data-i18n-en="GPS accuracy, elevation, power consumption and MicroSD logging tested under real conditions.">GPS-Genauigkeit, Höhendaten, Energieverbrauch und MicroSD-Logging werden unter realen Bedingungen getestet.</p>
+          <span class="roadmap__status" data-i18n-de="Jetzt" data-i18n-en="Now">Jetzt</span>
+        </li>
+        <li class="roadmap__item reveal reveal--delay-2" data-status="next">
+          <span class="roadmap__num">03 — Q3 '26</span>
+          <h3 class="roadmap__title"
+              data-i18n-de='App-Erfahrung <em>entwickelt.</em>'
+              data-i18n-en='App experience <em>built.</em>'>App-Erfahrung <em>entwickelt.</em></h3>
+          <p class="roadmap__desc"
+             data-i18n-de="Die App zeigt Gerätestatus, Tourdaten und Höhenprofile lokal — ohne Cloud-Zwang, ohne Konto."
+             data-i18n-en="The companion app shows device status, tour data and elevation profiles locally — no cloud, no account.">Die App zeigt Gerätestatus, Tourdaten und Höhenprofile lokal — ohne Cloud-Zwang, ohne Konto.</p>
+          <span class="roadmap__status" data-i18n-de="Als nächstes" data-i18n-en="Next">Als nächstes</span>
+        </li>
+        <li class="roadmap__item reveal reveal--delay-3">
+          <span class="roadmap__num">04 — Q4 '26</span>
+          <h3 class="roadmap__title"
+              data-i18n-de='Feldtests <em>durchgeführt.</em>'
+              data-i18n-en='Field tests <em>completed.</em>'>Feldtests <em>durchgeführt.</em></h3>
+          <p class="roadmap__desc"
+             data-i18n-de="Echte Testtouren liefern Daten zu Genauigkeit, Laufzeit, Bedienung — und die nächste Produktiteration."
+             data-i18n-en="Real test tours produce data on accuracy, runtime, controls — and the next product iteration.">Echte Testtouren liefern Daten zu Genauigkeit, Laufzeit, Bedienung — und die nächste Produktiteration.</p>
+          <span class="roadmap__status" data-i18n-de="Geplant" data-i18n-en="Planned">Geplant</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- =================== §05 CONTACT =================== -->
+    <header class="section-rule" id="contact">
+      <span class="section-rule__num">§ 05</span>
+      <span class="section-rule__title" data-i18n-de="Kontakt" data-i18n-en="Contact">Kontakt</span>
+      <span class="section-rule__num">hello@solotrail.at</span>
+    </header>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <div class="contact__bg" aria-hidden="true"></div>
+      <div class="reveal">
+        <span class="label"
+              data-i18n-de="Frühzeitig dabei"
+              data-i18n-en="Get in early">Frühzeitig dabei</span>
+        <h2 id="contact-title" class="h-mega" style="margin-top: 18px; max-width: 18ch"
+            data-i18n-de='Schreib uns,<br>wir <em>hören zu.</em>'
+            data-i18n-en='Drop us a line,<br>we <em>listen.</em>'>Schreib uns,<br>wir <em>hören zu.</em></h2>
+      </div>
+
+      <div class="contact__inner">
+        <div class="reveal">
+          <p class="lede"
+             data-i18n-de="Für Fragen zum Konzept, frühes Interesse am Prototyp oder einfach gute Tourempfehlungen — eine E-Mail genügt. Wir antworten selbst, ohne Funnel."
+             data-i18n-en="For questions about the concept, early interest in the prototype or simply good tour recommendations — one email is enough. We reply ourselves, no funnel.">Für Fragen zum Konzept, frühes Interesse am Prototyp oder einfach gute Tourempfehlungen — eine E-Mail genügt. Wir antworten selbst, ohne Funnel.</p>
+          <a class="contact__cta" href="mailto:hello@solotrail.at">
+            <span data-i18n-de="hello@solotrail.at schreiben" data-i18n-en="Email hello@solotrail.at">hello@solotrail.at schreiben</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <dl class="contact__details reveal reveal--delay-1">
+          <div>
+            <span class="label" data-i18n-de="Team" data-i18n-en="Team">Team</span>
+            <p class="value">SoloTrail Studio</p>
+          </div>
+          <div>
+            <span class="label" data-i18n-de="Sitz" data-i18n-en="Based in">Sitz</span>
+            <p class="value">Innsbruck, Österreich</p>
+          </div>
+          <div>
+            <span class="label" data-i18n-de="Update" data-i18n-en="Update">Update</span>
+            <p class="value"
+               data-i18n-de="Newsletter <em>folgt</em> — gerne nachfragen"
+               data-i18n-en="Newsletter <em>to come</em> — feel free to ask">Newsletter <em>folgt</em> — gerne nachfragen</p>
+          </div>
+        </dl>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="site-footer">
-    <p>SoloTrail ist ein früher technischer Prototyp und kein zertifiziertes Navigations- oder Sicherheitsgerät.</p>
-    <p><a href="mailto:hello@solotrail.at">hello@solotrail.at</a></p>
+  <!-- =================== COLOPHON / FOOTER =================== -->
+  <footer class="colophon">
+    <div class="colophon__top">
+      <h2 class="colophon__brand">SoloTrail.</h2>
+      <div class="colophon__masthead">
+        <div>
+          <h4 data-i18n-de="Konzept &amp; Entwicklung" data-i18n-en="Concept &amp; engineering">Konzept &amp; Entwicklung</h4>
+          <p>SoloTrail Studio, Innsbruck</p>
+        </div>
+        <div>
+          <h4 data-i18n-de="Kontakt" data-i18n-en="Contact">Kontakt</h4>
+          <p><a href="mailto:hello@solotrail.at">hello@solotrail.at</a></p>
+        </div>
+        <div>
+          <h4 data-i18n-de="Hardware" data-i18n-en="Hardware">Hardware</h4>
+          <p>NEO-6M · BMP280 · MicroSD · Li-Ion</p>
+        </div>
+        <div>
+          <h4 data-i18n-de="Stand" data-i18n-en="As of">Stand</h4>
+          <p data-i18n-de="Ausgabe 001 — Mai 2026" data-i18n-en="Issue 001 — May 2026">Ausgabe 001 — Mai 2026</p>
+        </div>
+      </div>
+    </div>
+    <div class="colophon__bottom">
+      <span>© 2026 SoloTrail</span>
+      <span class="note"
+            data-i18n-de="SoloTrail ist ein früher technischer Prototyp und kein zertifiziertes Navigations- oder Sicherheitsgerät."
+            data-i18n-en="SoloTrail is an early technical prototype and not a certified navigation or safety device.">SoloTrail ist ein früher technischer Prototyp und kein zertifiziertes Navigations- oder Sicherheitsgerät.</span>
+      <span data-i18n-de="Gemacht in Österreich" data-i18n-en="Made in Austria">Gemacht in Österreich</span>
+    </div>
   </footer>
 
   <script src="assets/js/main.js"></script>
