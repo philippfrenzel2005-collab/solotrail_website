@@ -43,24 +43,51 @@
         </div>
       </div>
 
-      <div class="hero-visual" aria-label="Illustration des Prototyp-Konzepts">
+      <div class="hero-visual" aria-label="Minimalistische Höhenkarte mit Route und Tourdaten">
         <div class="trail-card">
-          <div class="device">
-            <div class="device-screen">
-              <span class="screen-label">AKTIV</span>
-              <strong>14,8 km</strong>
-              <small>Höhe +426 m</small>
+          <div class="map-header">
+            <div>
+              <span class="screen-label">SOLOTRAIL LOG</span>
+              <strong>Höhenkarte</strong>
             </div>
-            <div class="device-leds" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
+            <span>14,8 km</span>
+          </div>
+
+          <div class="map-grid" aria-hidden="true">
+            <svg class="contour-map" viewBox="0 0 520 520">
+              <path class="contour contour-soft" d="M38 376C86 332 116 282 182 288C252 294 266 374 334 366C404 358 420 292 486 266" />
+              <path class="contour" d="M34 292C94 250 132 220 194 226C270 234 282 310 350 300C408 292 428 230 486 212" />
+              <path class="contour contour-strong" d="M72 204C136 160 194 144 252 162C318 184 316 236 370 238C420 240 448 198 492 170" />
+              <path class="contour" d="M28 132C92 108 140 84 214 94C278 102 314 138 362 132C414 126 442 88 496 76" />
+              <path class="contour contour-soft" d="M90 442C156 410 216 392 272 408C330 424 362 468 438 444" />
+              <path class="route-line" d="M86 404C116 356 150 336 180 298C216 252 238 198 286 190C330 184 354 228 382 204C412 178 424 138 472 112" />
+              <circle class="route-point route-start" cx="86" cy="404" r="9" />
+              <circle class="route-point route-end" cx="472" cy="112" r="9" />
+            </svg>
+
+            <span class="route-label start">Start</span>
+            <span class="route-label end">Ziel</span>
+
+            <div class="map-stat distance">
+              <span>Distanz</span>
+              <strong>14,8 km</strong>
+            </div>
+            <div class="map-stat altitude">
+              <span>Höhenmeter</span>
+              <strong>+426 m</strong>
+            </div>
+            <div class="map-stat privacy">
+              <span>Speicher</span>
+              <strong>Lokal</strong>
             </div>
           </div>
-          <div class="map-grid" aria-hidden="true">
-            <span class="route"></span>
-            <span class="pin start"></span>
-            <span class="pin end"></span>
+
+          <div class="elevation-profile" aria-hidden="true">
+            <span>Profil</span>
+            <svg viewBox="0 0 320 76">
+              <path class="profile-fill" d="M0 62L38 54L74 58L112 34L152 40L190 18L234 26L276 12L320 24V76H0Z" />
+              <path class="profile-line" d="M0 62L38 54L74 58L112 34L152 40L190 18L234 26L276 12L320 24" />
+            </svg>
           </div>
         </div>
       </div>
